@@ -39,7 +39,7 @@ public class CipmasBeans {
     @Bean(name = "SupplierServiceGeneric")
     @Qualifier("SupplierServiceGeneric")
     public GenericServiceImpl<Supplier> supplierServiceGeneric(){
-        var bean =  new GenericServiceImpl<Supplier>();
+        GenericServiceImpl<Supplier> bean = new GenericServiceImpl<>();
         bean.setRepo(supplierRepoI);
         return bean;
     }
@@ -47,7 +47,7 @@ public class CipmasBeans {
     @Bean(name = "CustomerServiceGeneric")
     @Qualifier("CustomerServiceGeneric")
     public GenericServiceImpl<Customer> customerServiceGeneric(){
-        var bean = new GenericServiceImpl<Customer>();
+        GenericServiceImpl<Customer> bean = new GenericServiceImpl<>();
         bean.setRepo(customerRepoI);
         return bean;
     }
@@ -55,7 +55,7 @@ public class CipmasBeans {
     @Bean(name = "QuotationServiceGeneric")
     @Qualifier("QuotationServiceGeneric")
     public GenericServiceImpl<Quotation> quotationServiceGeneric(){
-        var bean = new GenericServiceImpl<Quotation>();
+        GenericServiceImpl<Quotation> bean = new GenericServiceImpl<>();
         bean.setRepo(quotationRepoI);
         return bean;
     }
@@ -63,7 +63,7 @@ public class CipmasBeans {
     @Bean(name = "QuoteServiceGeneric")
     @Qualifier("QuoteServiceGeneric")
     public GenericServiceImpl<Quote> quoteServiceGeneric(){
-        var bean = new GenericServiceImpl<Quote>();
+        GenericServiceImpl<Quote> bean = new GenericServiceImpl<>();
         bean.setRepo(quoteRepoI);
         return bean;
     }
@@ -71,7 +71,7 @@ public class CipmasBeans {
     @Bean(name = "MaterialServiceGeneric")
     @Qualifier("MaterialServiceGeneric")
     public GenericServiceImpl<Material> materialServiceGeneric(){
-        var bean = new GenericServiceImpl<Material>();
+        GenericServiceImpl<Material> bean = new GenericServiceImpl<>();
         bean.setRepo(materialRepoI);
         return bean;
     }

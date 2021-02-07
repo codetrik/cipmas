@@ -24,10 +24,10 @@ public class CipmasUserService {
     public User createUser(User newUser) {
         Optional<User> nullableUser = Optional.ofNullable(cipmasUserRepo.findByUsername(newUser.getUsername()));
         Optional<Role> nullableRole = Optional.ofNullable(newUser.getRole());
-        if(nullableUser.isEmpty()) {
+        if(!nullableUser.isPresent()) {
 
             if(nullableRole.isPresent() && nullableRole.get().equals(Role.ADMIN)){
-                var nullableUserbyRole = Optional.ofNullable(cipmasUserRepo.findByRole(newUser.getRole()));
+                Optional<User> nullableUserbyRole = Optional.ofNullable(cipmasUserRepo.findByRole(newUser.getRole()));
                 if(nullableUserbyRole.isPresent()){
                     throw new UserAlreadyExistException("There cant be more than one ADMIN in the system. We found one already");
                 }else{

@@ -2,20 +2,16 @@ package ng.com.codetrik.cipmas.material.controller;
 /*
  @Author Hamzat Habibllahi
  */
+
 import ng.com.codetrik.cipmas.material.entity.Material;
-import ng.com.codetrik.cipmas.material.repository.MaterialRepoI;
 import ng.com.codetrik.cipmas.material.service.MaterialServiceI;
 import ng.com.codetrik.cipmas.utility.GenericServiceI;
 import ng.com.codetrik.cipmas.utility.enums.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
-import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 

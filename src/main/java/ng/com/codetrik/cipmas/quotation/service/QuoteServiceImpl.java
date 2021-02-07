@@ -1,6 +1,8 @@
 package ng.com.codetrik.cipmas.quotation.service;
 
+import ng.com.codetrik.cipmas.material.entity.Material;
 import ng.com.codetrik.cipmas.material.repository.MaterialRepoI;
+import ng.com.codetrik.cipmas.quotation.entity.Quotation;
 import ng.com.codetrik.cipmas.quotation.entity.Quote;
 import ng.com.codetrik.cipmas.quotation.repository.QuotationRepoI;
 import ng.com.codetrik.cipmas.quotation.repository.QuoteRepoI;
@@ -29,9 +31,9 @@ public class QuoteServiceImpl implements QuoteServiceI {
     @Override
     @Transactional
     public Quote saveQuote(Quote quote) {
-        var quotation = quotationRepoI.findById(quote.getQuotationId()).get();
+        Quotation quotation = quotationRepoI.findById(quote.getQuotationId()).get();
         quote.setQuotation(quotation);
-        var material = materialRepoI.findById(quote.getMaterialId()).get();
+        Material material = materialRepoI.findById(quote.getMaterialId()).get();
         quote.setMaterial(material);
         if(material.isDealerPrice())
             quote.setPrice(
