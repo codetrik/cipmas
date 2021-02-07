@@ -19,7 +19,7 @@ import java.util.UUID;
 @Entity
 @Data
 @JsonPropertyOrder(alphabetic = true)
-@Table(name="supplier")
+@Table(name="supplier",schema = "codetrik_server")
 public class Supplier implements Serializable {
     @Id
     @GeneratedValue(generator = "UUID")

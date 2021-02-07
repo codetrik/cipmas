@@ -35,7 +35,7 @@ public class HibernateConfig {
         hConfig.setJdbcUrl(jdbcUrl);
         hConfig.setUsername(userName);
         hConfig.setPassword(password);
-        //hConfig.setSchema("codetrik_server");
+        hConfig.setSchema("codetrik_server");
         hConfig.setAutoCommit(true);
         hConfig.setConnectionTimeout(30000L);
         hConfig.setIdleTimeout(60000L);
