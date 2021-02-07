@@ -18,7 +18,7 @@ import java.util.UUID;
 @Entity
 @Data
 @JsonPropertyOrder(alphabetic = true)
-@Table(name="customer",schema = "codetrik_server")
+@Table(name="customer")
 public class Customer implements Serializable {
 
     @Id

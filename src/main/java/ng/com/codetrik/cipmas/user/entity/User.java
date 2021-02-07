@@ -18,7 +18,7 @@ import java.util.UUID;
 
 @JsonPropertyOrder(alphabetic = true)
 @Entity
-@Table(name="user",schema = "codetrik_server")
+@Table(name="user")
 @Data
 public class User {
 

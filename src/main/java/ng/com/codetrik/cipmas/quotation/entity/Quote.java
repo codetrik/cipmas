@@ -12,7 +12,7 @@ import java.util.UUID;
 
 @Data
 @Entity
-@Table(name = "quote",schema = "codetrik_server")
+@Table(name = "quote")
 @JsonPropertyOrder(alphabetic = true)
 public class Quote {
 
