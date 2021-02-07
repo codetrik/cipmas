@@ -28,10 +28,9 @@ public class HibernateConfig {
         HikariConfig hConfig = new HikariConfig();
 
         hConfig.setDriverClassName("org.postgresql.Driver");
-/*      hConfig.setJdbcUrl("jdbc:postgresql://ec2-54-162-119-125.compute-1.amazonaws.com:5432/da77nb60ojktvr?password=c8e37ad3f42931e26c2bc855da26806b30f8c12423f399b9ee9554c7f438f0b5&sslmode=require&user=fknihocnordwve");
+        hConfig.setJdbcUrl("jdbc:postgresql://ec2-54-162-119-125.compute-1.amazonaws.com:5432/da77nb60ojktvr?password=c8e37ad3f42931e26c2bc855da26806b30f8c12423f399b9ee9554c7f438f0b5&sslmode=require&user=fknihocnordwve");
         hConfig.setUsername("fknihocnordwve");
         hConfig.setPassword("c8e37ad3f42931e26c2bc855da26806b30f8c12423f399b9ee9554c7f438f0b5");
-*/
         hConfig.setSchema("codetrik_server");
         hConfig.setAutoCommit(true);
         hConfig.setConnectionTimeout(30000L);
