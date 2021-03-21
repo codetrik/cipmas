@@ -3,6 +3,7 @@ package ng.com.codetrik.cipmas.supplier.entity;
  @Author Hamzat Habibllahi
  */
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Data;
 import ng.com.codetrik.cipmas.material.entity.Material;
@@ -38,6 +39,7 @@ public class Supplier implements Serializable {
     private Address address;
 
     @OneToMany(mappedBy = "supplier")
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private List<Material> materials;
 
 }

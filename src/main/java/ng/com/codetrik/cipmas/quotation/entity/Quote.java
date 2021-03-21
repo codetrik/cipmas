@@ -1,12 +1,12 @@
 package ng.com.codetrik.cipmas.quotation.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Data;
 import ng.com.codetrik.cipmas.material.entity.Material;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.util.UUID;
 
@@ -32,7 +32,7 @@ public class Quote {
     private double quantity;
 
     @ManyToOne
-    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Quotation quotation;
 
     @ManyToOne

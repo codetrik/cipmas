@@ -35,9 +35,11 @@ public class Quotation {
     private LocalDateTime updateTimestamp;
 
     @OneToMany(mappedBy = "quotation")
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private List<Quote> quotes;
 
     @OneToOne
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Customer customer;
 
     @Column(name = "description", nullable = false)
