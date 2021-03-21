@@ -38,7 +38,7 @@ public class Quotation {
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private List<Quote> quotes;
 
-    @OneToOne
+    @ManyToOne
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Customer customer;
 

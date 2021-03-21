@@ -13,6 +13,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -36,7 +37,7 @@ public class Customer implements Serializable {
     @NotNull
     Address address;
 
-    @OneToOne(mappedBy = "customer",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "customer",fetch = FetchType.LAZY)
     @JsonIgnore
-    private Quotation quotation;
+    private List<Quotation> quotation;
 }
