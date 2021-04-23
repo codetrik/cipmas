@@ -1,0 +1,28 @@
+package ng.com.codetrik.cipmas.exceptions;
+/*
+ @Author Hamzat Habibllahi
+ */
+import ng.com.codetrik.cipmas.utility.dto.Error;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+@ControllerAdvice
+public class ExceptionControlAdviser {
+
+    @ExceptionHandler(UserAlreadyExistException.class)
+    public ResponseEntity<?> userAlreadyExist(Exception exception){
+        return new ResponseEntity<>(new Error("User already exist", HttpStatus.FORBIDDEN),HttpStatus.FORBIDDEN);
+    }
+
+    @ExceptionHandler(NoSuchEntityException.class)
+    public ResponseEntity<?> noSuchEntityException(Exception exception){
+        return new ResponseEntity<>(new Error("No such entity found", HttpStatus.NOT_FOUND),HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(SaveUnsuccessfulException.class)
+    public ResponseEntity<?> SaveUnsuccessfulException(Exception exception){
+        return new ResponseEntity<>(new Error("save unsuccessful", HttpStatus.EXPECTATION_FAILED),HttpStatus.EXPECTATION_FAILED);
+    }
+}
